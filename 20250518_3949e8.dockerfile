@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Клонирование репозитория
-RUN git clone https://github.com/GravityWolfNotAmused/PlayerCountDiscordBot.git .
+RUN git clone https://github.com/OBSIDIAN404/PlayerCountDiscordBot.git .
 
 # Установка Python зависимостей
 RUN pip install --no-cache-dir -r requirements.txt

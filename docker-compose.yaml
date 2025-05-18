@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  playercountbot:
+    build:
+      context: https://github.com/OBSIDIAN404/PlayerCountDiscordBot.git#main
+      dockerfile: Dockerfile
+    container_name: playercountbot
+    restart: unless-stopped
+    environment:
+      - TOKEN=${DISCORD_TOKEN}
+      - CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - SERVER_IP=${GAME_SERVER_IP}
+      - SERVER_PORT=${GAME_SERVER_PORT}
+      - QUERY_PORT=${GAME_QUERY_PORT}
+      - UPDATE_INTERVAL=${UPDATE_INTERVAL_SECONDS}
